@@ -119,7 +119,7 @@ if ENV:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
 else:
-    from Zaid.config import Development as Config
+    from Demon.config import Development as Config
 
     TOKEN = Config.TOKEN
 
@@ -217,7 +217,7 @@ else:
         sw = None
         LOGGER.warning("Can't connect to SpamWatch!")
 
-from Zaid.modules.sql import SESSION
+from Demon.modules.sql import SESSION
 
 defaults = tg.Defaults(run_async=True)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
@@ -287,7 +287,7 @@ DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
-from Zaid.modules.helper_funcs.handlers import (
+from Demon.modules.helper_funcs.handlers import (
     CustomCommandHandler,
     CustomMessageHandler,
     CustomRegexHandler,
