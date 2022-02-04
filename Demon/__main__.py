@@ -239,7 +239,7 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="❣️ᴏᴡɴᴇʀ", url="t.me/shivamdemon")]]
+                [[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url="t.me/shivamdemon")]]
             ),
         )
         
@@ -385,13 +385,13 @@ def Demon_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="😈Dᴇᴠ", url="https://t.me/shivamdemon"
+                            text="Dᴇᴠ", url="https://t.me/shivamdemon"
                         ),
                         InlineKeyboardButton(
-                            text="❣️Gʀᴏᴜᴘ", url="https://t.me/Besties_adda"
+                            text="Gʀᴏᴜᴘ", url="https://t.me/Besties_adda"
                         ),
                     ],
-                    [InlineKeyboardButton(text="👉ʙᴀᴄᴋ", callback_data="Demon_back")],
+                    [InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="Demon_back")],
                 ]
             ),
         )
@@ -528,12 +528,12 @@ def Demon_about_callback(update, context):
         query.message.edit_text(
             text=f"<b> CREDIT FOR YURIKO DEV'S</b>\n"
             
-            f"\n`๏ Here Some Developers Helping in Making The Yuriko Bot`",
+            f"\n`๏ Here Some Developers Helping in Making The Demon Bot`",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="𝚂•4•𝚂𝙷𝙸𝚅", url="t.me/shivamdemom"),
+                    InlineKeyboardButton(text="𝚂𝙷𝙸𝚅", url="t.me/shivamdemom"),
                     InlineKeyboardButton(text="𝙰𝙻𝙾𝙽𝙴 𝙱𝙾𝚈", url="t.me/alone_boy_xd_01"),
                  ],
                  [
