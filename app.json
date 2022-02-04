@@ -61,6 +61,11 @@
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
         "value": ""
       },
+      "STRING_SESSION": {
+         "description": "Fill with telethon string session.",
+         "required": true,
+         "value": "" 
+      },
       "HEROKU_APP_NAME": {
         "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
         "required": false
