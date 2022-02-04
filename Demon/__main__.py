@@ -101,7 +101,7 @@ buttons = [
      ],
      [  
         InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url="https://t.me/BESTIES_FOREVER_LOVE"),
-        InlineKeyboardButton(text="ᴄʜᴀᴛ ɢʀᴏᴜᴘ 📢", url="https://t.me/Love_live_laughk"),
+        InlineKeyboardButton(text="ᴄʜᴀᴛ ɢʀᴏᴜᴘ ", url="https://t.me/Love_live_laughk"),
     ], 
 
     [
