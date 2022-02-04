@@ -5,8 +5,8 @@ from Demon.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     is_user_in_chat,
 )
-from Zaid.modules.helper_funcs.extraction import extract_user_and_text
-from Zaid.modules.helper_funcs.filters import CustomFilters
+from Demon.modules.helper_funcs.extraction import extract_user_and_text
+from Demon.modules.helper_funcs.filters import CustomFilters
 from telegram import Update, ChatPermissions
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler
