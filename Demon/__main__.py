@@ -86,18 +86,18 @@ PM_START_TEXT = """
 × `{}` *Usᴇʀs, Aᴄʀᴏss* `{}` *ᴄʜᴀᴛs.*
 ───────────────────────
 ✪ ɪ ᴀᴍ ᴠᴇʀʏ ꜰᴀꜱᴛ ᴀɴᴅ  ᴍᴏʀᴇ ᴇꜰꜰɪᴄɪᴇɴᴛ✌️\n  ɪ ᴘʀᴏᴠɪᴅᴇ ᴀᴡᴇꜱᴏᴍᴇ  ꜰᴇᴀᴛᴜʀᴇꜱ ᴡʜɪᴄʜ ɪs ʀᴇǫᴜɪʀᴇᴅ ᴛᴏ ᴍᴀɴᴀɢᴇ ᴀ ɢʀᴏᴜᴘ!
-[➼] Sᴏ ɪғ ʏᴏᴜ ʟɪᴋᴇ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ..
+[➼](https://telegra.ph/file/22bb36a4ce5db75931128.jpg) Sᴏ ɪғ ʏᴏᴜ ʟɪᴋᴇ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ..
 ───────────────────────
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="💕 ᴀᴅᴅ ᴅᴇᴍᴏɴ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ", url="http://t.me/im_demon_bot?startgroup=true"),
+            text=" ᴀᴅᴅ ᴅᴇᴍᴏɴ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ", url="http://t.me/im_demon_bot?startgroup=true"),
     ],
      [
         InlineKeyboardButton(text="🔥Dᴇᴠ", url=f"https://t.me/shivamdemon"),
-         InlineKeyboardButton(text="⚡Bʜᴀɪ ꜱᴜᴘᴘᴏʀᴛᴇʀ", url=f"https://t.me/Alone_boy_xd_01")
+         InlineKeyboardButton(text="Bʜᴀɪ ꜱᴜᴘᴘᴏʀᴛᴇʀ", url=f"https://t.me/Alone_boy_xd_01")
      ],
      [  
         InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ⚒️", url="https://t.me/BESTIES_FOREVER_LOVE"),
@@ -105,7 +105,7 @@ buttons = [
     ], 
 
     [
-        InlineKeyboardButton(text="👉ʜᴇʟᴘ ᴀɴᴅ ᴄᴍᴅs", callback_data="help_back"),
+        InlineKeyboardButton(text="ʜᴇʟᴘ ᴀɴᴅ ᴄᴍᴅs", callback_data="help_back"),
     ],
 ]
 
