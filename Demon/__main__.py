@@ -96,11 +96,11 @@ buttons = [
             text=" ᴀᴅᴅ ᴅᴇᴍᴏɴ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ", url="http://t.me/im_demon_bot?startgroup=true"),
     ],
      [
-        InlineKeyboardButton(text="🔥Dᴇᴠ", url=f"https://t.me/shivamdemon"),
+        InlineKeyboardButton(text="Dᴇᴠ", url=f"https://t.me/shivamdemon"),
          InlineKeyboardButton(text="Bʜᴀɪ ꜱᴜᴘᴘᴏʀᴛᴇʀ", url=f"https://t.me/Alone_boy_xd_01")
      ],
      [  
-        InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ⚒️", url="https://t.me/BESTIES_FOREVER_LOVE"),
+        InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url="https://t.me/BESTIES_FOREVER_LOVE"),
         InlineKeyboardButton(text="ᴄʜᴀᴛ ɢʀᴏᴜᴘ 📢", url="https://t.me/Love_live_laughk"),
     ], 
 
