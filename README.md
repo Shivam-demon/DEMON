@@ -9,7 +9,7 @@ For Any Query  Support  👥
 Hey Welcome To Here 💫💫 You Can Make Your Own Management Bot
 
 
-[![DEMON AGAIN LOGO](https://telegra.ph/file/22bb36a4ce5db75931128.jpg)](https://t.me/SUPERIOR_SUPPORT )
+[![DEMON AGAIN LOGO](https://telegra.ph/file/22bb36a4ce5db75931128.jpg)](https://t.me/shivamdemon )
 
 🔥 𝐃𝐄𝐏𝐋𝐎𝐘 𝐎𝐍 𝐘𝐎𝐔𝐑 𝐎𝐖𝐍 𝐑𝐈𝐒𝐊 🔥
 DON'T ASK FOR REPO PLEASE ...
