@@ -423,15 +423,15 @@ def Demon_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="😇Aᴅᴍɪɴ", callback_data="Demon_admin"),
-                    InlineKeyboardButton(text="⭕Nᴏᴛᴇꜱ", callback_data="Demon_notes"),
+                    InlineKeyboardButton(text="Aᴅᴍɪɴ", callback_data="Demon_admin"),
+                    InlineKeyboardButton(text="Nᴏᴛᴇꜱ", callback_data="Demon_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="🔉Sᴜᴘᴘᴏʀᴛ", callback_data="Demon_support"),
-                    InlineKeyboardButton(text="🤑ᴅᴏɴᴀᴛᴇ", callback_data="Demon_credit"),
+                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", callback_data="Demon_support"),
+                    InlineKeyboardButton(text="ᴅᴏɴᴀᴛᴇ", callback_data="Demon_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="🔜ʙᴀᴄᴋ", callback_data="Demon_back"),
+                    InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="Demon_back"),
                  
                  ]
                 ]
@@ -477,7 +477,7 @@ def Demon_about_callback(update, context):
             f"\n\n ๏ `3.) add` @YurikoPlugin `to your group:`"
             f"\n\n ๏ `4.) turn on the video chat first before start to play music.`"
             f"\n\n ๏ *Lets Enjoy The Yuriko Music And Join Support Group @DeCodeSupport*"
-            f"\n\n* ๏ Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: 𝐒•4•𝐒𝐇𝐈𝐕!*",
+            f"\n\n* ๏ Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: 𝐒4𝐒𝐇𝐈𝐕!*",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
