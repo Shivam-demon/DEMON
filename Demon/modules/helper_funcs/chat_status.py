@@ -403,6 +403,6 @@ def connection_status(func):
 
 
 # Workaround for circular import with connection.py
-from Zaid.modules import connection
+from Demon.modules import connection
 
 connected = connection.connected
