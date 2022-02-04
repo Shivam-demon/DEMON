@@ -494,7 +494,7 @@ def Demon_about_callback(update, context):
             f"\n`๏ You can ban members, Kick members, Promote someone as admin through commands of bot.`"
             f"\n\n ๏ *Welcome*"
             f"\n`๏ Lets set a welcome message to welcome new users coming to your group.`"
-            f"\n ๏ `send` `/setwelcome [message]` `to set a welcome message!`"",
+            f"\n ๏ `send` `/setwelcome [message]` `to set a welcome message!`",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
