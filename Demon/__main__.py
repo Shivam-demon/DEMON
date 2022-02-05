@@ -119,7 +119,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="Sᴜᴍᴍᴏɴ Mᴇ", url="http://t.m/im_demon_bot?startgroup=true),
+        InlineKeyboardButton(text="Sᴜᴍᴍᴏɴ Mᴇ", url="http://t.m/im_demon_bot?startgroup=true"),
     ],
 ]
 
