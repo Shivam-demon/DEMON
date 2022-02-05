@@ -18,7 +18,7 @@ import sys
 
 from envparse import env
 
-from DaisyX.utils.logger import log
+from Demon.utils.logger import log
 
 DEFAULTS = {
     "DEBUG_MODE": True,
