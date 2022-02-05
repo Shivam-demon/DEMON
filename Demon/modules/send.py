@@ -1,7 +1,7 @@
 from telegram.ext import run_async
 
 from Demon import dispatcher
-from Demom.modules.disable import DisableAbleCommandHandler
+from Demon.modules.disable import DisableAbleCommandHandler
 from Demon.modules.helper_funcs.alternate import send_message
 from Demon.modules.helper_funcs.chat_status import user_admin
 
