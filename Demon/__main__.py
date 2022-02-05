@@ -88,7 +88,7 @@ PM_START_TEXT = """
 × *Uᴘᴛɪᴍᴇ:* `{}`
 × `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*
 ────────────────────────
-✗ *Pᴏᴡᴇʀᴇᴅ 💕 Bʏ:* [S•4•Sʜɪᴠ](https://t.me/shivamdemon)❗
+✗ *Pᴏᴡᴇʀᴇᴅ 💕 Bʏ:* **[S•4•Sʜɪᴠ](https://t.me/shivamdemon)**!
 ✪ [ᴅᴇᴍᴏɴ ᴏɴ ғɪʀᴇ](https://telegra.ph/file/22bb36a4ce5db75931128.jpg)
 """
 
