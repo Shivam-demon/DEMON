@@ -486,10 +486,10 @@ def yurikorobot_about_callback(update, context):
                 [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_back")]]
             ),
         )
-    elif query.data.data == "yurikorobot_admin":
+    elif query.data == "yurikorobot_admin":
         query.message.edit_text(
             text=f"*Let's Make Your Group Bit Effective Now*"
-            f"\n๏  `Congragulations, YurikoRobot now ready to manage your group.`"
+            f"\n๏  `Congragulations, DEMON now ready to manage your group.`"
             f"\n\n*Admin Tools*"
             f"\n๏  `Basic Admin tools help you to protect and powerup your group.`"
             f"\n๏  `You can ban members, Kick members, Promote someone as admin through commands of bot.`"
