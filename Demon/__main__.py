@@ -6,12 +6,12 @@ import time
 import re
 import sys
 import traceback
-import Demon.modules.sql.users_sql as sql
+import Yuriko.modules.sql.users_sql as sql
 from sys import argv
 from typing import Optional
 from telegram import __version__ as peler
 from platform import python_version as memek
-from Demon import (
+from Yuriko import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -32,9 +32,9 @@ from Demon import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from Demon.modules import ALL_MODULES
-from Demon.modules.helper_funcs.chat_status import is_user_admin
-from Demon.modules.helper_funcs.misc import paginate_modules
+from Yuriko.modules import ALL_MODULES
+from Yuriko.modules.helper_funcs.chat_status import is_user_admin
+from Yuriko.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -82,31 +82,36 @@ def get_readable_time(seconds: int) -> str:
 yurikorobot_IMG = "https://telegra.ph/file/8b6f8f2bb4ff3912634c7.jpg"
 
 PM_START_TEXT = """
-* ʜᴇʟʟᴏ 🤗 ɪ ᴀᴍ  ᴅᴇᴍᴏɴ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ.
-───────────────────────
+*👋 Hello {} !*
+
+✗ *I'Aᴍ Aɴ Aɴɪᴍᴇ-Tʜᴇᴍᴇ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ*
+✗ *Aᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ  Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ  I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ  Fᴇᴀᴛᴜʀᴇꜱ!*
+────────────────────────
 × *Uᴘᴛɪᴍᴇ:* `{}`
-× `{}` *Usᴇʀs, Aᴄʀᴏss* `{}` *ᴄʜᴀᴛs.*
-───────────────────────
-✪ ɪ ᴀᴍ ᴠᴇʀʏ ꜰᴀꜱᴛ ᴀɴᴅ  ᴍᴏʀᴇ ᴇꜰꜰɪᴄɪᴇɴᴛ✌️\n  ɪ ᴘʀᴏᴠɪᴅᴇ ᴀᴡᴇꜱᴏᴍᴇ  ꜰᴇᴀᴛᴜʀᴇꜱ ᴡʜɪᴄʜ ɪs ʀᴇǫᴜɪʀᴇᴅ ᴛᴏ ᴍᴀɴᴀɢᴇ ᴀ ɢʀᴏᴜᴘ!
-[➼](https://telegra.ph/file/22bb36a4ce5db75931128.jpg) Sᴏ ɪғ ʏᴏᴜ ʟɪᴋᴇ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ..
-───────────────────────
+× `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*
+────────────────────────
+✗ *Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: Tᴇᴀᴍ DᴇCᴏᴅᴇ!*
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="💕 ᴀᴅᴅ ᴅᴇᴍᴏɴ ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ", url="http://t.me/im_demon_bot?startgroup=true"),
+            text="Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ", callback_data="help_back"),
     ],
-     [
-        InlineKeyboardButton(text="🔥Dᴇᴠ", url=f"https://t.me/shivamdemon"),
-         InlineKeyboardButton(text="⚡Bʜᴀɪ ꜱᴜᴘᴘᴏʀᴛᴇʀ", url=f"https://t.me/Alone_boy_xd_01")
-     ],
-     [  
-        InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ⚒️", url="https://t.me/BESTIES_FOREVER_LOVE"),
-        InlineKeyboardButton(text="ᴄʜᴀᴛ ɢʀᴏᴜᴘ 📢", url="https://t.me/Love_live_laughk"),
-    ], 
     [
-        InlineKeyboardButton(text="👉ʜᴇʟᴘ ᴀɴᴅ ᴄᴍᴅs", callback_data="help_back"),
+        InlineKeyboardButton(text="Aꜱꜱɪꜱᴛᴀɴᴛ", callback_data="yurikorobot_asst"),
+        InlineKeyboardButton(
+            text="Iɴʟɪɴᴇ", switch_inline_query_current_chat=""
+        ),
+    ],
+    [
+        InlineKeyboardButton(text="Aʙᴏᴜᴛ", callback_data="yurikorobot_"),
+        InlineKeyboardButton(
+            text="Bᴀꜱɪᴄ Hᴇʟᴘ", callback_data="yurikorobot_basichelp"
+        ),
+    ],
+    [
+        InlineKeyboardButton(text="Sᴜᴍᴍᴏɴ Mᴇ", url="http://t.me/YurikoRobot?startgroup=true"),
     ],
 ]
 
@@ -114,15 +119,15 @@ buttons = [
 HELP_STRINGS = """
 *✗ MAIN COMMANDS ✗*
 
-✗ /start - `Starts me! Your probably already used this.`
-✗ /help - `Click this I ll let you know about myself!`
-✗ /settings - `in PM: will send you your settings for all supported modules.`
-✗ *In A Group: Will Redirect You To Pm With All That Chats Settings.*)"""
+๏  /start - `Starts me! Your probably already used this.`
+๏  /help - `Click this I ll let you know about myself!`
+๏  /settings - `in PM: will send you your settings for all supported modules.`
+๏  *In A Group: Will Redirect You To Pm With All That Chats Settings.*)"""
 
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- @Shivamdemom 💕"""
+ @shivademon 💕"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -207,7 +212,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅️ BACK", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="⬅️ ʙᴀᴄᴋ", callback_data="help_back")]]
                     ),
                 )
 
@@ -371,12 +376,12 @@ def help_button(update, context):
 
 
 
-def Demon_about_callback(update, context):
+def yurikorobot_about_callback(update, context):
     query = update.callback_query
-    if query.data == "Demon_":
+    if query.data == "yurikorobot_":
         query.message.edit_text(
-            text=""" *Dᴇᴍᴏɴ✌️* - `A bot to manage your groups with additional features!`
-            \n`Here the basic help regarding use of DEMON Bot.`
+            text=""" *𝐃𝐄𝐌𝐎𝐍* - `A bot to manage your groups with additional features!`
+            \n`Here the basic help regarding use of yurikorobot.`
             
             \n`Almost all modules usage defined in the help menu, checkout by sending` `/help`
             \n`Report error/bugs click the Button`""",
@@ -386,17 +391,17 @@ def Demon_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʙᴜɢs", url="t.me/shivamdemon"
+                            text="Bᴜɢ'ꜱ", url="t.me/SHIVAMDEMON"
                         ),
                         InlineKeyboardButton(
-                            text="ᴄʜᴀᴛs", url="https://t.me/besties_adda"
+                            text="Gʀᴏᴜᴘ", url="https://t.me/Besties_adda"
                         ),
                     ],
-                    [InlineKeyboardButton(text="Back", callback_data="Demon_back")],
+                    [InlineKeyboardButton(text="Back", callback_data="yurikorobot_back")],
                 ]
             ),
         )
-    elif query.data == "Demon_back":
+    elif query.data == "yurikorobot_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
@@ -410,13 +415,13 @@ def Demon_about_callback(update, context):
                 timeout=60,
                 disable_web_page_preview=False,
         )
-    elif query.data == "Demon_basichelp":
+    elif query.data == "yurikorobot_basichelp":
         query.message.edit_text(
             text=f"*Here's basic Help regarding* *How to use Me?*"
             
-            f"\n\n✗ `Firstly Add` {dispatcher.bot.first_name} `to your group by pressing` [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
-            f"\n✗ `After adding promote me manually with full rights for faster experience.`\n"
-            f"\n✗ `Than send` `/admincache` `in that chat to refresh admin list in My database.`\n"
+            f"\n\n๏  `Firstly Add` {dispatcher.bot.first_name} `to your group by pressing` [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
+            f"\n๏  `After adding promote me manually with full rights for faster experience.`\n"
+            f"\n๏  `Than send` `/admincache` `in that chat to refresh admin list in My database.`\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -424,119 +429,120 @@ def Demon_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Aᴅᴍɪɴ", callback_data="Demon_admin"),
-                    InlineKeyboardButton(text="Nᴏᴛᴇꜱ", callback_data="Demon_notes"),
+                    InlineKeyboardButton(text="Aᴅᴍɪɴ", callback_data="yurikorobot_admin"),
+                    InlineKeyboardButton(text="Nᴏᴛᴇꜱ", callback_data="yurikorobot_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", callback_data="Demon_support"),
-                    InlineKeyboardButton(text="Cʀᴇᴅɪᴛ", callback_data="Demon_credit"),
+                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", callback_data="yurikorobot_support"),
+                    InlineKeyboardButton(text="Cʀᴇᴅɪᴛ", callback_data="yurikorobot_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="Demon_back"),
+                    InlineKeyboardButton(text="Back", callback_data="yurikorobot_back"),
                  
                  ]
                 ]
             ),
         )
-    elif query.data == "Demon_admin":
+    elif query.data == "yurikorobot_admin":
         query.message.edit_text(
             text=f"*Let's Make Your Group Bit Effective Now*"
             
-            f"\n✗ `Congragulations, 𝐃𝐞𝐦𝐨𝐧 now ready to manage your group.`"
+            f"\n๏  `Congragulations, DEMON now ready to manage your group.`"
             f"\n\n*Admin Tools*"
-            f"\n✗ `Basic Admin tools help you to protect and powerup your group.`"
-            f"\n✗ `You can ban members, Kick members, Promote someone as admin through commands of bot.`"
+            f"\n๏  `Basic Admin tools help you to protect and powerup your group.`"
+            f"\n๏  `You can ban members, Kick members, Promote someone as admin through commands of bot.`"
             f"\n\n*Welcome*"
-            f"\n✗ `Lets set a welcome message to welcome new users coming to your group.`"
-            f"\n✗ `send` `/setwelcome [message]` `to set a welcome message!`",
+            f"\n๏  `Lets set a welcome message to welcome new users coming to your group.`"
+            f"\n๏  `send` `/setwelcome [message]` `to set a welcome message!`",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="Demon_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp")]]
             ),
         )
 
-    elif query.data == "Demon_notes":
+    elif query.data == "yurikorobot_notes":
         query.message.edit_text(
             text=f"<b> Setting Up Notes</b>"
             
-            f"\n`✗ You can save message/media/audio or anything as notes`"
-            f"\n`✗ to get a note simply use` # `at the beginning of a word`"
-            f"\n\n`✗ You can also set buttons for notes and filters (refer help menu)`",
+            f"\n`๏  You can save message/media/audio or anything as notes`"
+            f"\n`๏  to get a note simply use` # `at the beginning of a word`"
+            f"\n\n`๏  You can also set buttons for notes and filters (refer help menu)`",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="Demon_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp")]]
             ),
         )
-    elif query.data == "Demon_asst":
+    elif query.data == "yurikorobot_asst":
         query.message.edit_text(
             text=f"*Hᴇʀᴇ Iꜱ Tʜᴇ Hᴇʟᴘ 「Aꜱꜱɪꜱᴛᴀɴᴛ」 Mᴏᴅᴜʟᴇ:*"
             
             f"\n*SETUP ASSISTANT*"
-            f"\n\n✗ `1.) first, add me to your group.`"
-            f"\n\n✗ `2.) then promote me as admin and give all permissions except anonymous admin.`"
-            f"\n\n✗ `3.) turn on the video chat first before start to play music.`"
-            f"\n\n✗ *Lets Enjoy The Music And Join Support for Query*"
-            f"\n\n*✗ Pᴏᴡᴇʀᴇᴅ 𝐒4𝐒𝐇𝐈𝐕*",
+            f"\n\n๏  `1.) first, add me to your group.`"
+            f"\n\n๏  `2.) then promote me as admin and give all permissions except anonymous admin.`"
+            f"\n\n๏  `4.) turn on the video chat first before start to play music.`"
+            f"\n\n๏  *Lets Enjoy The Music And Msg for Help @shivamdemon*"
+            f"\n\n*๏  Pᴏᴡᴇʀᴇᴅ 💕 Bʏ:[S•4•Sʜɪᴠ](https://t.me/shivamdemon)!*",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="Demon_back")]]
+                [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_back")]]
             ),
         )
-    elif query.data.data == "Demon_admin":
+    elif query.data.data == "yurikorobot_admin":
         query.message.edit_text(
             text=f"*Let's Make Your Group Bit Effective Now*"
             
-            f"\n✗ `Congragulations, 𝐃𝐞𝐦𝐨𝐧 now ready to manage your group.`"
+            f"\n๏  `Congragulations, YurikoRobot now ready to manage your group.`"
             f"\n\n*Admin Tools*"
-            f"\n✗ `Basic Admin tools help you to protect and powerup your group.`"
-            f"\n✗ `You can ban members, Kick members, Promote someone as admin through commands of bot.`"
+            f"\n๏  `Basic Admin tools help you to protect and powerup your group.`"
+            f"\n๏  `You can ban members, Kick members, Promote someone as admin through commands of bot.`"
             f"\n\n*Welcome*"
-            f"\n✗ `Lets set a welcome message to welcome new users coming to your group.`"
-            f"\n✗ `send` `/setwelcome [message]` `to set a welcome message!`",
+            f"\n๏  `Lets set a welcome message to welcome new users coming to your group.`"
+            f"\n๏  `send` `/setwelcome [message]` `to set a welcome message!`",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="Demon_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp")]]
             ),
         )    
-    elif query.data == "Demon_support":
+    elif query.data == "yurikorobot_support":
         query.message.edit_text(
-            text="*  Support Chats*"
+            text="*Support Chats*"
             
-            "\n\n✗ `Join Support Group`",
+            "\n\n✗ `Join Support Group/Channel`",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="ᴅᴇᴠ", url="t.me/shivamdemon"),
+                    InlineKeyboardButton(text="🔥ᴅᴇᴠ", url="t.me/shivamdemkn"),
+                    InlineKeyboardButton(text="💝Bʜᴀɪ", url="t.me/alone_boy_xd_01"),
                  ],
                  [
-                    InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/besties_adda"),
-                    InlineKeyboardButton(text="ᴛɪᴍᴇᴘᴀss", url="https://t.me/amazingnights"),
+                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/Decodesupport"),
+                    InlineKeyboardButton(text="Tɪᴍᴇᴘᴀss", url="https://t.me/deecodebots"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="Demon_basichelp"),
+                    InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="yurikorobot_basichelp"),
                  
                  ]
                 ]
             ),
         )
-    elif query.data == "Demon_credit":
+    elif query.data == "yurikorobot_credit":
         query.message.edit_text(
             text=f"<b> CREDIT FOR DEV'S</b>\n"
             
-            f"\n`✗ Here Some Developers Helping in Making The Bot`",
+            f"\n`๏  Here Some Developers Helping in Making The Yuriko Bot`",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="𝚂4𝚂𝙷𝙸𝚅", url="t.me/Shivamdemon"),
-                    InlineKeyboardButton(text="𝙰𝙻𝙾𝙽𝙴𝙱𝙾𝚈", url="t.me/alone_boy_xd_01"),
+                    InlineKeyboardButton(text="S•4•Sʜɪᴠ", url="t.me/shivamdemon"),
+                    InlineKeyboardButton(text="Aʟᴏɴᴇʙᴏʏ", url="t.me/alone_boy_xd_01"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="Demon_basichelp"),
+                    InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp"),
                  
                  ]
                 ]
@@ -549,7 +555,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..😻 I'm *Demon*
+            text=""" Hi..😻 I'm *𝐃𝐄𝐌𝐎𝐍*
                  \nHere is the [🔥Source Code🔥](https://t.me/shivamdemon) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -803,7 +809,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 829943136 and DONATION_LINK:
+        if OWNER_ID != 1947924017 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -868,7 +874,7 @@ def main():
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
-    about_callback_handler = CallbackQueryHandler(Demon_about_callback, pattern=r"Demon_")
+    about_callback_handler = CallbackQueryHandler(yurikorobot_about_callback, pattern=r"yurikorobot_")
     source_callback_handler = CallbackQueryHandler(Source_about_callback, pattern=r"source_")
 
     donate_handler = CommandHandler("donate", donate)
