@@ -18,7 +18,7 @@
 
 from pyrogram import filters
 
-from Demon.utils.pluginhelpers import admins_only, get_text
+from Demon.utils.pluginhelper import admins_only, get_text
 from Demon.services.pyrogram import pbot
 
 
