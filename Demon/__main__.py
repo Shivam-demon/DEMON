@@ -79,7 +79,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-yurikorobot_IMG = "https://telegra.ph/file/8b6f8f2bb4ff3912634c7.jpg"
+yurikorobot_IMG = "https://telegra.ph/file/78fc66b0da8d6f9a2f1dc.jpg"
 
 PM_START_TEXT = """
 ✗ *I'Aᴍ Aɴ Aɴɪᴍᴇ-Tʜᴇᴍᴇ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ*
@@ -112,7 +112,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="ɢᴇᴛ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ👅", url="http://t.me/YurikoRobot?startgroup=true"),
+        InlineKeyboardButton(text="ɢᴇᴛ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ👅", url="http://t.me/im_demon_bot?startgroup=true"),
     ],
 ]
 
