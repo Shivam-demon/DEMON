@@ -241,13 +241,6 @@ pbot = Client(
     workers=min(32, os.cpu_count() + 4),
 )
 
-tbot = TelegramClient(
-    NAME,
-    api_id=APP_ID,
-    api_hash="APP_HASH",
-)
-tbot.start(bot_token=TOKEN)
-
 
 async def get_entity(client, entity):
     entity_client = client
