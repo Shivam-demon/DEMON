@@ -243,6 +243,11 @@ pbot = Client(
 apps = []
 apps.append(pbot)
 
+tbot = TelegramClient(
+    NAME, get_int_key("APP_ID", required=True), get_str_key("APP_HASH", required=True)
+)
+tbot.start(bot_token=TOKEN)
+
 
 async def get_entity(client, entity):
     entity_client = client
