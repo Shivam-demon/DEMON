@@ -23,7 +23,7 @@ from telethon.tl.types import *
 from zalgo_text import zalgo
 
 from Demon import *
-from Demon.services.events import register
+from Demon.events import register
 from Demon.services.telethon import tbot
 from Demon import ubot2
 
