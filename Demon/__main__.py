@@ -88,7 +88,8 @@ PM_START_TEXT = """
 × *Uᴘᴛɪᴍᴇ:* `{}`
 × `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*
 ────────────────────────
-✗ *Pᴏᴡᴇʀᴇᴅ 💕 Bʏ:* [S•4•Sʜɪᴠ](https://t.me/shivamdemon)
+✗ *Pᴏᴡᴇʀᴇᴅ 💕 Bʏ:* [S•4•Sʜɪᴠ](https://t.me/shivamdemon)❗
+✪ [ᴅᴇᴍᴏɴ ᴏɴ ғɪʀᴇ](https://telegra.ph/file/22bb36a4ce5db75931128.jpg)
 """
 
 buttons = [
@@ -98,8 +99,10 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="Aꜱꜱɪꜱᴛᴀɴᴛ", callback_data="yurikorobot_asst"),
+    ],
+    [
         InlineKeyboardButton(
-            text="Iɴʟɪɴᴇ", switch_inline_query_current_chat=""
+            text="🔥ᴅᴇᴠ", url="https://t.me/shivamdemon"
         ),
     ],
     [
@@ -109,7 +112,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="Sᴜᴍᴍᴏɴ Mᴇ", url="http://t.me/YurikoRobot?startgroup=true"),
+        InlineKeyboardButton(text="ɢᴇᴛ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ👅", url="http://t.me/YurikoRobot?startgroup=true"),
     ],
 ]
 
@@ -519,7 +522,6 @@ def yurikorobot_about_callback(update, context):
                     InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="yurikorobot_basichelp"),
                  
                  ]
-                ]
             ),
         )
     elif query.data == "yurikorobot_credit":
@@ -538,7 +540,6 @@ def yurikorobot_about_callback(update, context):
                     InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp"),
                  
                  ]
-                ]
             ),
         )
         
