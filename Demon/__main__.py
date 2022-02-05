@@ -520,8 +520,8 @@ def yurikorobot_about_callback(update, context):
                  ],
                  [
                     InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="yurikorobot_basichelp"),
-                 
                  ]
+                ]
             ),
         )
     elif query.data == "yurikorobot_credit":
@@ -538,8 +538,8 @@ def yurikorobot_about_callback(update, context):
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp"),
-                 
                  ]
+                ]
             ),
         )
         
