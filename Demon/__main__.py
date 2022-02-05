@@ -6,12 +6,12 @@ import time
 import re
 import sys
 import traceback
-import Demon.modules.sql.users_sql as sql
+import Yuriko.modules.sql.users_sql as sql
 from sys import argv
 from typing import Optional
 from telegram import __version__ as peler
 from platform import python_version as memek
-from Demon import (
+from Yuriko import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -32,9 +32,9 @@ from Demon import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from Demon.modules import ALL_MODULES
-from Demon.modules.helper_funcs.chat_status import is_user_admin
-from Demon.modules.helper_funcs.misc import paginate_modules
+from Yuriko.modules import ALL_MODULES
+from Yuriko.modules.helper_funcs.chat_status import is_user_admin
+from Yuriko.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -79,19 +79,18 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-yurikorobot_IMG = "https://telegra.ph/file/78fc66b0da8d6f9a2f1dc.jpg"
+yurikorobot_IMG = "https://telegra.ph/file/8b6f8f2bb4ff3912634c7.jpg"
 
 PM_START_TEXT = """
-* ʜᴇʟʟᴏ 🤗 ɪ ᴀᴍ  ᴅᴇᴍᴏɴ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ.
-───────────────────────
+*👋 Hello {} !*
+
+✗ *I'Aᴍ Aɴ Aɴɪᴍᴇ-Tʜᴇᴍᴇ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ*
+✗ *Aᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ  Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ  I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ  Fᴇᴀᴛᴜʀᴇꜱ!*
+────────────────────────
 × *Uᴘᴛɪᴍᴇ:* `{}`
-× `{}` *Usᴇʀs, Aᴄʀᴏss* `{}` *ᴄʜᴀᴛs.*
-───────────────────────
- ɪ ᴀᴍ ᴠᴇʀʏ ꜰᴀꜱᴛ ᴀɴᴅ  ᴍᴏʀᴇ ᴇꜰꜰɪᴄɪᴇɴᴛ✌️\n  ɪ ᴘʀᴏᴠɪᴅᴇ ᴀᴡᴇꜱᴏᴍᴇ  ꜰᴇᴀᴛᴜʀᴇꜱ ᴡʜɪᴄʜ ɪs ʀᴇǫᴜɪʀᴇᴅ ᴛᴏ ᴍᴀɴᴀɢᴇ ᴀ ɢʀᴏᴜᴘ!
-[➼](https://telegra.ph/file/22bb36a4ce5db75931128.jpg) Sᴏ ɪғ ʏᴏᴜ ʟɪᴋᴇ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ..
-
-───────────────────────
-
+× `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*
+────────────────────────
+✗ *Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: Tᴇᴀᴍ DᴇCᴏᴅᴇ!*
 """
 
 buttons = [
