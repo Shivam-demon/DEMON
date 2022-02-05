@@ -17,8 +17,6 @@ import emoji
 import nltk
 from fontTools.ttLib import TTFont
 from PIL import Image, ImageDraw, ImageEnhance, ImageFont, ImageOps
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from telethon import *
 from telethon.tl import functions
 from telethon.tl.types import *
