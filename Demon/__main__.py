@@ -382,7 +382,7 @@ def yurikorobot_about_callback(update, context):
     if query.data == "yurikorobot_":
         query.message.edit_text(
             text=""" *𝐃𝐄𝐌𝐎𝐍* - `A bot to manage your groups with additional features!`
-            \n`Here the basic help regarding use of yurikorobot.`
+            \n`Here the basic help regarding use of DEMON.`
             
             \n`Almost all modules usage defined in the help menu, checkout by sending` `/help`
             \n`Report error/bugs click the Button`""",
