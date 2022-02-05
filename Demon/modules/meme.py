@@ -24,7 +24,7 @@ from zalgo_text import zalgo
 
 from Demon import *
 from Demon.events import register
-from Demon.services.telethon import tbot
+from Demon import tbot
 from Demon import ubot2
 
 nltk.download("punkt")
