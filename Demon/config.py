@@ -4,8 +4,8 @@ class Config(object):
         # REQUIRED
             # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-                API_ID = "6435225"  
-                    API_HASH = "Aww"
+                API_ID = ""  
+                    API_HASH = ""
                         TOKEN = ""
                             OWNER_ID = "1669178360"
                                 OWNER_USERNAME = "Timesisnotwaiting"
