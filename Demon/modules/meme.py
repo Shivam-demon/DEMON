@@ -8,7 +8,7 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import escape_markdown
 
-import Demon.modules.helper_funcs.fun_strings as fun
+import Demon.modules.fun_strings as fun
 from Demon import DEMONS, DRAGONS, dispatcher
 from Demon.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
 from Demon.modules.helper_funcs.alternate import typing_action
