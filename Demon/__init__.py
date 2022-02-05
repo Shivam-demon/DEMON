@@ -244,7 +244,7 @@ apps = []
 apps.append(pbot)
 
 tbot = TelegramClient(
-    NAME, get_int_key("APP_ID", required=True), get_str_key("APP_HASH", required=True)
+    NAME,("APP_ID", required=True),("APP_HASH", required=True)
 )
 tbot.start(bot_token=TOKEN)
 
