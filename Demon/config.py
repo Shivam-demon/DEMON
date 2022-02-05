@@ -6,7 +6,7 @@ class Config(object):
 
                 API_ID = "3109964"  
                     API_HASH = "06eea2ad9f2c7042f74685558210c480"
-                        TOKEN = "5105966452:AAHg9B-pVNidxghqhNof_Xp8TBE0Twloe0E"
+                        TOKEN = ""
                             OWNER_ID = "1669178360"
                                 OWNER_USERNAME = "Timesisnotwaiting"
                                     MONGO_DB_URI = ""
