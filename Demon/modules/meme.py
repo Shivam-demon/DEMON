@@ -27,7 +27,7 @@ from zalgo_text import zalgo
 from Demon import *
 from Demon.services.events import register
 from Demon.services.telethon import tbot
-from Demon.services.telethonuserbot import ubot
+from Demon import ubot2
 
 nltk.download("punkt")
 nltk.download("averaged_perceptron_tagger")
