@@ -79,7 +79,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-Demon_IMG = "https://telegra.ph/file/78fc66b0da8d6f9a2f1dc.jpg"
+Demon_IMG = "https://telegra.ph/file/bd233da16e77889ad558b.jpg"
 
 PM_START_TEXT = """
 * ʜᴇʟʟᴏ 🤗 ɪ ᴀᴍ  ᴅᴇᴍᴏɴ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ.
