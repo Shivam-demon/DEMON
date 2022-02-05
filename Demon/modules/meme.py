@@ -9,7 +9,6 @@ from random import randint, uniform
 
 import nltk
 import requests
-from cowpy import cow
 from PIL import Image, ImageDraw, ImageEnhance, ImageFont, ImageOps
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
