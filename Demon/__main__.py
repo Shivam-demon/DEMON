@@ -82,15 +82,13 @@ def get_readable_time(seconds: int) -> str:
 yurikorobot_IMG = "https://telegra.ph/file/8b6f8f2bb4ff3912634c7.jpg"
 
 PM_START_TEXT = """
-*👋 Hello {} !*
-
 ✗ *I'Aᴍ Aɴ Aɴɪᴍᴇ-Tʜᴇᴍᴇ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ*
 ✗ *Aᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ  Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ  I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ  Fᴇᴀᴛᴜʀᴇꜱ!*
 ────────────────────────
 × *Uᴘᴛɪᴍᴇ:* `{}`
 × `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*
 ────────────────────────
-✗ *Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: Tᴇᴀᴍ DᴇCᴏᴅᴇ!*
+✗ *Pᴏᴡᴇʀᴇᴅ 💕 Bʏ:* [S•4•Sʜɪᴠ](https://t.me/shivamdemon)
 """
 
 buttons = [
@@ -127,7 +125,7 @@ HELP_STRINGS = """
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- @shivademon 💕"""
+ @shivamdemon 💕"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -418,7 +416,6 @@ def yurikorobot_about_callback(update, context):
     elif query.data == "yurikorobot_basichelp":
         query.message.edit_text(
             text=f"*Here's basic Help regarding* *How to use Me?*"
-            
             f"\n\n๏  `Firstly Add` {dispatcher.bot.first_name} `to your group by pressing` [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n๏  `After adding promote me manually with full rights for faster experience.`\n"
             f"\n๏  `Than send` `/admincache` `in that chat to refresh admin list in My database.`\n"
@@ -445,8 +442,7 @@ def yurikorobot_about_callback(update, context):
         )
     elif query.data == "yurikorobot_admin":
         query.message.edit_text(
-            text=f"*Let's Make Your Group Bit Effective Now*"
-            
+            text=f"*Let's Make Your Group Bit Effective Now*"    
             f"\n๏  `Congragulations, DEMON now ready to manage your group.`"
             f"\n\n*Admin Tools*"
             f"\n๏  `Basic Admin tools help you to protect and powerup your group.`"
@@ -463,8 +459,7 @@ def yurikorobot_about_callback(update, context):
 
     elif query.data == "yurikorobot_notes":
         query.message.edit_text(
-            text=f"<b> Setting Up Notes</b>"
-            
+            text=f"<b> Setting Up Notes</b>"   
             f"\n`๏  You can save message/media/audio or anything as notes`"
             f"\n`๏  to get a note simply use` # `at the beginning of a word`"
             f"\n\n`๏  You can also set buttons for notes and filters (refer help menu)`",
@@ -475,8 +470,7 @@ def yurikorobot_about_callback(update, context):
         )
     elif query.data == "yurikorobot_asst":
         query.message.edit_text(
-            text=f"*Hᴇʀᴇ Iꜱ Tʜᴇ Hᴇʟᴘ 「Aꜱꜱɪꜱᴛᴀɴᴛ」 Mᴏᴅᴜʟᴇ:*"
-            
+            text=f"*Hᴇʀᴇ Iꜱ Tʜᴇ Hᴇʟᴘ 「Aꜱꜱɪꜱᴛᴀɴᴛ」 MᴏᴅᴜLE*"   
             f"\n*SETUP ASSISTANT*"
             f"\n\n๏  `1.) first, add me to your group.`"
             f"\n\n๏  `2.) then promote me as admin and give all permissions except anonymous admin.`"
@@ -492,7 +486,6 @@ def yurikorobot_about_callback(update, context):
     elif query.data.data == "yurikorobot_admin":
         query.message.edit_text(
             text=f"*Let's Make Your Group Bit Effective Now*"
-            
             f"\n๏  `Congragulations, YurikoRobot now ready to manage your group.`"
             f"\n\n*Admin Tools*"
             f"\n๏  `Basic Admin tools help you to protect and powerup your group.`"
@@ -510,7 +503,7 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text="*Support Chats*"
             
-            "\n\n✗ `Join Support Group/Channel`",
+            "\n\n`Join Support Group/Channel`",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
