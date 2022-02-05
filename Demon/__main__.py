@@ -526,7 +526,7 @@ def yurikorobot_about_callback(update, context):
     elif query.data == "yurikorobot_credit":
         query.message.edit_text(
             text=f"<b> CREDIT FOR DEV'S</b>\n"
-            f"\n`๏  Here Some Developers Helping in Making The Yuriko Bot`",
+            f"\n`๏  Here Some Developers Helping in Making The DEMON Bot`",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
