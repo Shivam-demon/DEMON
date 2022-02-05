@@ -88,7 +88,7 @@ PM_START_TEXT = """
 × *Uᴘᴛɪᴍᴇ:* `{}`
 × `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*
 ────────────────────────
-✗ *Pᴏᴡᴇʀᴇᴅ 💕 Bʏ:* **[S•4•Sʜɪᴠ](https://t.me/shivamdemon)**!
+✗ *Pᴏᴡᴇʀᴇᴅ 💕 Bʏ:* **S•4•Sʜɪᴠ**
 ✪ [ᴅᴇᴍᴏɴ ᴏɴ ғɪʀᴇ](https://telegra.ph/file/22bb36a4ce5db75931128.jpg)
 """
 
@@ -505,7 +505,6 @@ def yurikorobot_about_callback(update, context):
     elif query.data == "yurikorobot_support":
         query.message.edit_text(
             text="*Support Chats*"
-            
             "\n\n`Join Support Group/Channel`",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -527,7 +526,6 @@ def yurikorobot_about_callback(update, context):
     elif query.data == "yurikorobot_credit":
         query.message.edit_text(
             text=f"<b> CREDIT FOR DEV'S</b>\n"
-            
             f"\n`๏  Here Some Developers Helping in Making The Yuriko Bot`",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
