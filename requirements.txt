@@ -85,4 +85,4 @@ pendulum
 fuzzysearch
 img2pdf
 multicolorcaptcha
-selenium==4.0.0
+
