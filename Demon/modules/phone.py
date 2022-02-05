@@ -3,7 +3,7 @@ import json
 import requests
 from telegram.ext import CommandHandler, run_async
 
-from Demonimport dispatcher
+from Demon import dispatcher
 from Demon.modules.helper_funcs.alternate import send_message
 from Demon.modules.helper_funcs.chat_status import user_admin
 
