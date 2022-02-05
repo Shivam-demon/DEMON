@@ -6,7 +6,7 @@ from telethon import *
 from telethon.tl.types import *
 
 from Demon import *
-from Demon import ubot
+from Demon import ubot2
 from Demon.events import register
 
 EMOJI_PATTERN = re.compile(
