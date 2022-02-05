@@ -4,9 +4,9 @@ class Config(object):
         # REQUIRED
             # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-                API_ID = ""  
-                    API_HASH = ""
-                        TOKEN = ""
+                API_ID = "9035014"  
+                    API_HASH = "9fc53d421fa601d48611d39a29f9e53b"
+                        TOKEN = "5105966452:AAHg9B-pVNidxghqhNof_Xp8TBE0Twloe0E"
                             OWNER_ID = "1669178360"
                                 OWNER_USERNAME = "Timesisnotwaiting"
                                     MONGO_DB_URI = ""
