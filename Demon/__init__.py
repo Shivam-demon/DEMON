@@ -240,11 +240,11 @@ pbot = Client(
     bot_token=TOKEN,
     workers=min(32, os.cpu_count() + 4),
 )
-apps = os.environ.get("token", none)
-NAME = TOKEN.split(":")[0]
 
 tbot = TelegramClient(
-    NAME,("APP_ID"),("APP_HASH")
+    NAME,
+    api_id=APP_ID,
+    api_hash="APP_HASH",
 )
 tbot.start(bot_token=TOKEN)
 
