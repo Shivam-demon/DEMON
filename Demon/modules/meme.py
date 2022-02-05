@@ -12,7 +12,7 @@ import requests
 from PIL import Image, ImageDraw, ImageEnhance, ImageFont, ImageOps
 from zalgo_text import zalgo
 
-from Demon import telethn, ubot
+from Demon import telethn
 from Demon.events import register
 
 nltk.download("punkt")
