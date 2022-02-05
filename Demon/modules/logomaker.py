@@ -68,7 +68,7 @@ async def logo_gen(event):
             pics.append(i)
         id_ = random.choice(pics)
         bg_ = await id_.download_media()
-        fpath_ = glob.glob("./Zaid/resources/fonts/*")
+        fpath_ = glob.glob("./Demon/resources/fonts/*")
         font_ = random.choice(fpath_)
     if not bg_:
         pics = []
@@ -79,7 +79,7 @@ async def logo_gen(event):
         id_ = random.choice(pics)
         bg_ = await id_.download_media()
     if not font_:
-        fpath_ = glob.glob("./Zaid/resources/fonts/*")
+        fpath_ = glob.glob("./Demon/resources/fonts/*")
         font_ = random.choice(fpath_)
     if len(name) <= 8:
         fnt_size = 120
@@ -113,7 +113,7 @@ async def logo_gen(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [Zaid Robot](https://t.me/Zaid2_Robot)",
+            caption="Logo by [DEMON BOT](https://t.me/Im_demon_bot)",
             force_document=False,
         )
         os.remove(flnme)
@@ -121,7 +121,7 @@ async def logo_gen(event):
     if os.path.exists(bg_):
         os.remove(bg_) 
     if os.path.exists(font_):
-        if not font_.startswith("./Zaid/resources/fonts"):
+        if not font_.startswith("./Demon/resources/fonts"):
             os.remove(font_)
 
 
@@ -151,7 +151,7 @@ async def logo_(event):
             pics.append(i)
         id_ = random.choice(pics)
         bg_ = await id_.download_media()
-        fpath_ = glob.glob("./Zaid/resources/fonts/*")
+        fpath_ = glob.glob("./Demon/resources/fonts/*")
         font_ = random.choice(fpath_)
     if not bg_:
         pics = []
@@ -162,7 +162,7 @@ async def logo_(event):
         id_ = random.choice(pics)
         bg_ = await id_.download_media()
     if not font_:
-        fpath_ = glob.glob("./Zaid/resources/fonts/*")
+        fpath_ = glob.glob("./Demon/resources/fonts/*")
         font_ = random.choice(fpath_)
     if len(name) <= 8:
         fnt_size = 105
@@ -196,7 +196,7 @@ async def logo_(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [Zaid](https://t.me/Zaid2_Robot)",
+            caption="Logo by [Demon](https://t.me/im_demon_bot)",
             force_document=False,
         )
         os.remove(flnme)
@@ -204,7 +204,7 @@ async def logo_(event):
     if os.path.exists(bg_):
         os.remove(bg_) 
     if os.path.exists(font_):
-        if not font_.startswith("./Zaid/resources/fonts"):
+        if not font_.startswith("./Demon/resources/fonts"):
             os.remove(font_)
 
 
