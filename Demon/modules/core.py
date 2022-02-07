@@ -9,7 +9,7 @@ from Demon import OWNER_ID, DEV_USERS
 from Demon import TEMP_DOWNLOAD_DIRECTORY as path
 from Demon import TEMP_DOWNLOAD_DIRECTORY
 from datetime import datetime
-water = './Demon/resources/zaid.png'
+water = './Demon/resources/Demon.png'
 client = tbot
 
 @register(pattern=r"^/send ?(.*)")
