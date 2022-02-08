@@ -282,7 +282,7 @@ def info(update: Update, context: CallbackContext):
                     text += _stext.format("Detected")
                 elif status in {"administrator", "creator"}:
                     text += _stext.format("Admin")
-    if user_id not in [bot.id, 1669178360, 1087968824]:
+    if user_id not in [bot.id, 5278710200, 829943136]:
         userhp = hpmanager(user)
         text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
@@ -315,8 +315,8 @@ def info(update: Update, context: CallbackContext):
     elif user.id in WOLVES:
         text += "\n\nThe Disaster level of this person is 'Soldier'."
         disaster_level_present = True
-    elif user.id == 1866203936:
-         text += "\n\nOwner Of A Bot. Queen Of @Timesisnotwaiting. Bot Name Inspired From 'Lydia'."
+    elif user.id == 829943136:
+         text += "\n\nOwner Of A Bot. Queen Of @SHIVAMDEMON. Bot Name Inspired From 'Lydia'."
          disaster_level_present = True
 
     try:
@@ -353,9 +353,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/SUPERIOR_BOTS/136"),
+                                "Health", url="https://telegra.ph/𝐒𝟒𝐒𝐇𝐈𝐕-𝐗𝐃--𝙸-𝐀𝔪-E-𝗠𝔬ℕ𓂸-02-08"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/SUPERIOR_BOTS/136")
+                                "Disaster", url="https://telegra.ph/𝐒𝟒𝐒𝐇𝐈𝐕-𝐗𝐃--𝙸-𝐀𝔪-E-𝗠𝔬ℕ𓂸-02-08")
                         ],
                     ]
                 ),
@@ -371,9 +371,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/SUPERIOR_BOTS/136"),
+                                "Health", url="https://telegra.ph/𝐒𝟒𝐒𝐇𝐈𝐕-𝐗𝐃--𝙸-𝐀𝔪-E-𝗠𝔬ℕ𓂸-02-08"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/SUPERIOR_BOTS/136")
+                                "Disaster", url="https://telegra.ph/𝐒𝟒𝐒𝐇𝐈𝐕-𝐗𝐃--𝙸-𝐀𝔪-E-𝗠𝔬ℕ𓂸-02-08")
                         ],
                     ]
                 ),
@@ -447,7 +447,7 @@ def set_about_me(update: Update, context: CallbackContext):
 def stats(update: Update, context: CallbackContext):
     stats = "<b>╔═━「 Current Statistics 」</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
-    result += "\n<b>╘═━「 Powered By [ZAID](https://github.com/ITZ-ZAID)」</b>"
+    result += "\n<b>╘═━「 Powered By [𝐒•4•𝐒𝐡𝐢𝐯](https://t.me/shivamdemon)」</b>"
     update.effective_message.reply_text(
         result,
         parse_mode=ParseMode.HTML, 
@@ -495,7 +495,7 @@ def set_about_bio(update: Update, context: CallbackContext):
             )
             return
 
-        if user_id in [777000, 1087968824] and sender_id not in DEV_USERS:
+        if user_id in [777000, 829943136] and sender_id not in DEV_USERS:
             message.reply_text("You are not authorised")
             return
 
