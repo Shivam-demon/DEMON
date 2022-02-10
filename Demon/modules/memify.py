@@ -37,7 +37,7 @@ async def drawText(image_path, text):
     shadowcolor = "black"
     i_width, i_height = img.size
     if os.name == "nt":
-        fnt = "Maghrib.ttf"
+        fnt = "ariel.ttf"
     else:
         fnt = "./Demon/resources/default.ttf"
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
