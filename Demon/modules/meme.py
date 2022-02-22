@@ -15,17 +15,6 @@ from Demon.modules.helper_funcs.alternate import typing_action
 from Demon.modules.helper_funcs.extraction import extract_user
 
 
-@run_async
-@typing_action
-def truth(update, context):
-    update.effective_message.reply_text(random.choice(fun.TRUTH))
-
-
-@run_async
-@typing_action
-def dare(update, context):
-    update.effective_message.reply_text(random.choice(fun.DARE))
-
 
 # run
 @run_async
