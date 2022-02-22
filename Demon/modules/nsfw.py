@@ -26,7 +26,7 @@ from pyrogram import filters
 from Demon import BOT_USERNAME, arq, pbot
 from Demon.ex_plugins.dbfunctions import is_nsfw_on, nsfw_off, nsfw_on
 from Demon.utils.errors import capture_err
-from Demon.utils.permission import adminsOnly
+from Demon.utils.permissions import adminsOnly
 
 __mod_name__ = "NSFW👅"
 
