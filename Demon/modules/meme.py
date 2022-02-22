@@ -553,8 +553,6 @@ GDNIGHT_HANDLER = DisableAbleMessageHandler(
 
 dispatcher.add_handler(PAT_HANDLER)
 dispatcher.add_handler(SHOUT_HANDLER)
-dispatcher.add_handler(DARE_HANDLER)
-dispatcher.add_handler(TRUTH_HANDLER)
 dispatcher.add_handler(SANITIZE_HANDLER)
 dispatcher.add_handler(GBAM_HANDLER)
 dispatcher.add_handler(SHRUG_HANDLER)
