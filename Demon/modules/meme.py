@@ -510,8 +510,6 @@ __help__ = """
  ✪ /shout*:* write anything you want to give loud shoute
  ✪ /plet <text>*:* make ur text sticker in different colours
  
- ✪ /truth or /dare*:* Send random truth or dare.
-
 *Memes*
 ✪ /hitler*:* Quote a message and type this command to make a caption of hitler
 ✪ /mock*:* Does the same as /hitler but spongemock instead
@@ -534,8 +532,6 @@ __mod_name__ = "Memes 😜"
 
 PAT_HANDLER = DisableAbleCommandHandler("pat", pat)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
-DARE_HANDLER = DisableAbleCommandHandler("dare", dare)
-TRUTH_HANDLER = DisableAbleCommandHandler("truth", truth)
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize)
 SHRUG_HANDLER = DisableAbleCommandHandler("shrug", shrug)
 DECIDE_HANDLER = DisableAbleMessageHandler(
