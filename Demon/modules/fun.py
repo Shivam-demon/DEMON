@@ -2,7 +2,7 @@ import html
 import random
 import time
 
-import Demon.modules.fun_strings as fun_strings
+import Demon.modules.fun_strings as fun
 from Demon import dispatcher
 from Demon.modules.disable import DisableAbleCommandHandler
 from Demon.modules.helper_funcs.chat_status import is_user_admin
