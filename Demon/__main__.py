@@ -514,8 +514,8 @@ def yurikorobot_about_callback(update, context):
                     InlineKeyboardButton(text="💝Bʜᴀɪ", url="t.me/alone_boy_xd_01"),
                  ],
                  [
-                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/Decodesupport"),
-                    InlineKeyboardButton(text="Tɪᴍᴇᴘᴀss", url="https://t.me/deecodebots"),
+                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/Besties_adda"),
+                    InlineKeyboardButton(text="Tɪᴍᴇᴘᴀss", url="https://t.me/amazingnights"),
                  ],
                  [
                     InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="yurikorobot_basichelp"),
