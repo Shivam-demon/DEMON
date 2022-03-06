@@ -84,5 +84,6 @@ tzlocal==4.1
 pendulum
 fuzzysearch
 img2pdf
+lyricsgenius==3.0.1
 multicolorcaptcha
 
