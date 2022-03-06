@@ -92,6 +92,7 @@ if ENV:
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", None)
     VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
+    GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", None)
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", False))
@@ -181,6 +182,7 @@ else:
     ALLOW_EXCL = Config.ALLOW_EXCL
     CASH_API_KEY = Config.CASH_API_KEY
     TIME_API_KEY = Config.TIME_API_KEY
+    GENIUS_API_TOKEN = Config.GENIUS_API_TOKEN
     WALL_API = Config.WALL_API
     SUPPORT_CHAT = Config.SUPPORT_CHAT
     SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
