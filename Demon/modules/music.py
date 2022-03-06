@@ -28,7 +28,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-download_youtube_audio(url: str):
+def download_youtube_audio(url: str):
 
     global is_downloading
 
