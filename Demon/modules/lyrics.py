@@ -40,7 +40,7 @@ from telegram import Message
 
 
 from Demon.utils.pluginhelper import get_text, progress
-from Demom import pbot, GENIUS_API_TOKEN, BOT_USERNAME, arq
+from Demon import pbot, GENIUS_API_TOKEN, BOT_USERNAME, arq
 from Demon.modules.disable import DisableAbleCommandHandler
 
 
