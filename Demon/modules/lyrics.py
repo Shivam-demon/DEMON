@@ -38,9 +38,10 @@ from tswift import Song
 from youtubesearchpython import SearchVideos
 from telegram import Message
 
-from Cutiepii_Robot.utils.pluginhelp import get_text, progress
-from Cutiepii_Robot import pbot, GENIUS_API_TOKEN, BOT_USERNAME, arq
-from Cutiepii_Robot.modules.disable import DisableAbleCommandHandler
+
+from Demon.utils.pluginhelper import get_text, progress
+from Demom import pbot, GENIUS_API_TOKEN, BOT_USERNAME, arq
+from Demon.modules.disable import DisableAbleCommandHandler
 
 
 async def lyrics_func(answers, text):
