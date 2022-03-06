@@ -14,10 +14,10 @@ from youtubesearchpython import SearchVideos
 
 from Demon import pbot
 from Demon.conf import get_str_key
-from Demon.pyrogramee.pluginshelper import get_text, progress
+from Demon.utils.pluginshelper import get_text, progress
 
 GENIUS = get_str_key("GENIUS_API_TOKEN", None)
-import youtube_dl
+import yt_dlp
 from youtube_search import YoutubeSearch
 
 from Demon import BOT_USERNAME
