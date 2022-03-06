@@ -17,76 +17,6 @@ from youtubesearchpython import SearchVideos
 from Demon.utils.pluginhelper import get_text, progress
 from Demon import pbot, arq
 
-async def lyrics_func(answers, text):
-    song = await arq.lyrics(text)
-    if not song.ok:
-        answers.append(
-            InlineQueryResultArticle(
-                title="Error",
-                description=song.result,
-                input_message_content=InputTextMessageContent(
-                    song.result
-                ),
-            )
-        )
-        return answers
-    lyrics = song.result
-    song = lyrics.splitlines()
-    song_name = song[0]
-    artist = song[1]
-    if len(lyrics) > 4095:
-        lyrics = await hastebin(lyrics)
-        lyrics = f"**LYRICS_TOO_LONG:** [URL]({lyrics})"
-
-    msg = f"**__{lyrics}__**"
-
-    answers.append(
-        InlineQueryResultArticle(
-            title=song_name,
-            description=artist,
-            input_message_content=InputTextMessageContent(msg),
-        )
-    )
-    return answers
-
-
-def get_file_extension_from_url(url):
-    url_path = urlparse(url).path
-    basename = os.path.basename(url_path)
-    return basename.split(".")[-1]
-
-
-def download_youtube_audio(url: str):
-    global is_downloading
-    with yt_dlp.YoutubeDL(
-        {
-            "format": "bestaudio",
-            "writethumbnail": True,
-            "quiet": True,
-        }
-    ) as ydl:
-        info_dict = ydl.extract_info(url, download=False)
-        if int(float(info_dict["duration"])) > 180:
-            is_downloading = False
-            return []
-        ydl.process_info(info_dict)
-        audio_file = ydl.prepare_filename(info_dict)
-        basename = audio_file.rsplit(".", 1)[-2]
-        if info_dict["ext"] == "webm":
-            audio_file_opus = basename + ".opus"
-            ffmpeg.input(audio_file).output(
-                audio_file_opus, codec="copy", loglevel="error"
-            ).overwrite_output().run()
-            os.remove(audio_file)
-            audio_file = audio_file_opus
-        thumbnail_url = info_dict["thumbnail"]
-        thumbnail_file = (
-            basename + "." + get_file_extension_from_url(thumbnail_url)
-        )
-        title = info_dict["title"]
-        performer = info_dict["uploader"]
-        duration = int(float(info_dict["duration"]))
-    return [title, performer, duration, audio_file, thumbnail_file]
 
 
 @pbot.on_message(filters.command(["vsong", "video"]))
@@ -236,17 +166,3 @@ async def ytmusic(client, message: Message):
     for files in (sedlyf, file_stark):
         if files and os.path.exists(files):
             os.remove(files)
-
-
-@pbot.on_message(filters.command(["lyric", "lyrics"]))
-async def lyrics_func(_, message):
-    if len(message.command) < 2:
-        return await message.reply_text("**Usage:**\n/lyrics [QUERY]")
-    m = await message.reply_text("**__Searching your lyrics__**")
-    query = message.text.strip().split(None, 1)[1]
-    song = await arq.lyrics(query)
-    lyrics = song.result
-    if len(lyrics) < 4095:
-        return await m.edit(f"**__{lyrics}__**")
-    lyrics = await paste(lyrics)
-    await m.edit(f"**LYRICS_TOO_LONG:** [URL]({lyrics})")
