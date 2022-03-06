@@ -14,7 +14,7 @@ from youtubesearchpython import SearchVideos
 
 from Demon import pbot
 from Demon.conf import get_str_key
-from Demon.utils.pluginshelper import get_text, progress
+from Demon.utils.pluginhelper import get_text, progress
 
 GENIUS = get_str_key("GENIUS_API_TOKEN", None)
 import yt_dlp
