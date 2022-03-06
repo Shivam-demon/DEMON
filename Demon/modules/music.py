@@ -9,7 +9,7 @@ import wget
 from pyrogram import filters
 from pyrogram.types import Message
 from tswift import Song
-from yt-dlp import YoutubeDL
+from yt_dlp import YoutubeDL
 from youtubesearchpython import SearchVideos
 
 from Demom import pbot
@@ -20,7 +20,7 @@ GENIUS = get_str_key("GENIUS_API_TOKEN", None)
 import youtube_dl
 from youtube_search import YoutubeSearch
 
-from ShasaBot import BOT_USERNAME
+from Demon import BOT_USERNAME
 
 
 def time_to_seconds(time):
