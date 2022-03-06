@@ -12,7 +12,7 @@ from tswift import Song
 from yt_dlp import YoutubeDL
 from youtubesearchpython import SearchVideos
 
-from Demom import pbot
+from Demon import pbot
 from Demon.conf import get_str_key
 from Demon.pyrogramee.pluginshelper import get_text, progress
 
