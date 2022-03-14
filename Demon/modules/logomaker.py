@@ -44,10 +44,10 @@ def mediainfo(media):
 
 @register(pattern="^/logo ?(.*)")
 async def logo_gen(event):
-    xx = await event.reply("Preparing your logo...")
+    xx = await event.reply("`Preparing logo😶...`")
     name = event.pattern_match.group(1)
     if not name:
-        await xx.edit("Provide some text to draw!\nExample: /logo <your name>!")
+        await xx.edit("`GIVE WORDS TO MAKE 😏!\nExample: /logo <DEMON>!`")
         return
     bg_, font_ = "", ""
     if event.reply_to_msg_id:
@@ -106,28 +106,29 @@ async def logo_gen(event):
     y = (image_height - h) / 2
     draw.text((x, y), name, font=font, fill="white",
               stroke_width=strke, stroke_fill="black")
-    flnme = f"logo.png"
+    flnme = 'logo.png'
     img.save(flnme, "png")
-    await xx.edit("Downloading")
+    await xx.edit("`Uploading`")
     if os.path.exists(flnme):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [DEMON BOT](https://t.me/Im_demon_bot)",
+            caption="Logo by [DEMON](https://t.me/Im_demon_bot)",
             force_document=False,
         )
         os.remove(flnme)
         await xx.delete()
     if os.path.exists(bg_):
-        os.remove(bg_) 
-    if os.path.exists(font_):
-        if not font_.startswith("./Demon/resources/fonts"):
-            os.remove(font_)
+        os.remove(bg_)
+    if os.path.exists(font_) and not font_.startswith(
+        "./Yuriko/resources/fonts"
+    ):
+        os.remove(font_)
 
 
 @register(pattern="^/wlogo ?(.*)")
 async def logo_(event):
-    xx = await event.reply("Preparing your logo...")
+    xx = await event.reply("`Bana raha hu roka todi ma bh insaan hu machine nahi😶...`")
     name = event.pattern_match.group(1)
     if not name:
         await xx.edit("`Provide some text to draw!\nExample: /wlogo <your name>!`")
@@ -151,7 +152,7 @@ async def logo_(event):
             pics.append(i)
         id_ = random.choice(pics)
         bg_ = await id_.download_media()
-        fpath_ = glob.glob("./Demon/resources/fonts/*")
+        fpath_ = glob.glob("./Yuriko/resources/fonts/*")
         font_ = random.choice(fpath_)
     if not bg_:
         pics = []
@@ -162,7 +163,7 @@ async def logo_(event):
         id_ = random.choice(pics)
         bg_ = await id_.download_media()
     if not font_:
-        fpath_ = glob.glob("./Demon/resources/fonts/*")
+        fpath_ = glob.glob("./Yuriko/resources/fonts/*")
         font_ = random.choice(fpath_)
     if len(name) <= 8:
         fnt_size = 105
@@ -189,33 +190,36 @@ async def logo_(event):
     y = (image_height - h) / 2
     draw.text((x, y), name, font=font, fill="white",
               stroke_width=strke, stroke_fill="black")
-    flnme = f"logo.png"
+    flnme = 'logo.png'
     img.save(flnme, "png")
     await xx.edit("`Uploading`")
     if os.path.exists(flnme):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [Demon](https://t.me/im_demon_bot)",
+            caption="Logo by [DEMON](https://t.me/Im_demon_bot)",
             force_document=False,
         )
         os.remove(flnme)
         await xx.delete()
     if os.path.exists(bg_):
-        os.remove(bg_) 
-    if os.path.exists(font_):
-        if not font_.startswith("./Demon/resources/fonts"):
-            os.remove(font_)
+        os.remove(bg_)
+    if os.path.exists(font_) and not font_.startswith(
+        "./Yuriko/resources/fonts"
+    ):
+        os.remove(font_)
 
 
-__mod_name__ = "Logomaker"
+__mod_name__ = "LᴏɢᴏMᴀᴋᴇʀ"
 
-__help__ = """ This is help menu for logomaker
+__help__ = """
 
-❂ /logo <text/name> - Create a logo with random view.
-❂ /wlogo <text/name> - Create a logo with wide view only.
+✗ /logo - `<text/name> Create a logo with random view.`
 
- Image Editor :
+✗ /wlogo - `<text/name> Create a logo with wide view only.`
 
-❂  /edit <reply photo> - to edit image.
+ *Image Editor :*
+
+✗  /edit - `<reply photo> to edit image.`
+
 """
