@@ -1,26 +1,52 @@
+"""
+MIT License
+
+Copyright (C) 2017-2019, Paul Larsen
+Copyright (C) 2021 Awesome-RJ
+Copyright (c) 2021, Yūki • Black Knights Union, <https://github.com/Awesome-RJ/CutiepiiRobot>
+
+This file is part of @Cutiepii_Robot (Telegram Bot)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
+
 import json
 import re
 import os
 import html
 import requests
-import Demon.modules.sql.kuki_sql as sql
+import Demon.modules.sql.chatbot_sql as sql
 
 from time import sleep
 from telegram import ParseMode
-from Demon import dispatcher, updater, SUPPORT_CHAT
-from Demon.modules.log_channel import gloggable
 from telegram import (CallbackQuery, Chat, MessageEntity, InlineKeyboardButton,
-                      InlineKeyboardMarkup, Message, ParseMode, Update, Bot, User)
-
+                      InlineKeyboardMarkup, Message, Update, Bot, User)
 from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
                           DispatcherHandlerStop, Filters, MessageHandler,
                           run_async)
-
 from telegram.error import BadRequest, RetryAfter, Unauthorized
+from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
 from Demon.modules.helper_funcs.filters import CustomFilters
-from Demon.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply 
-from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
+from Demon.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from Demon import dispatcher, updater, SUPPORT_CHAT
+from Demon.modules.log_channel import gloggable
 
  
 @user_admin_no_reply
@@ -42,7 +68,7 @@ def kukirm(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                " 𝙲𝚑𝚊𝚝𝙱𝚘𝚝 𝙳𝚒𝚜𝚊𝚋𝚕𝚎 𝙱𝚢🔇 {}.".format(mention_html(user.id, user.first_name)),
+                "Cutiepii Chatbot disable by {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
 
@@ -67,7 +93,7 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                " 𝙲𝚑𝚊𝚝𝙱𝚘𝚝 𝙴𝚗𝚊𝚋𝚕𝚎 𝙱𝚢📣 {}.".format(mention_html(user.id, user.first_name)),
+                "Cutiepii Chatbot enable by {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
 
@@ -78,14 +104,14 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
 def kuki(update: Update, context: CallbackContext):
     user = update.effective_user
     message = update.effective_message
-    msg = f"Choose an option👻"
+    msg = "Choose an option"
     keyboard = InlineKeyboardMarkup([[
         InlineKeyboardButton(
-            text="Enable🔥",
+            text="Enable",
             callback_data="add_chat({})")],
        [
         InlineKeyboardButton(
-            text="Disable💔",
+            text="Disable",
             callback_data="rm_chat({})")]])
     message.reply_text(
         msg,
@@ -117,7 +143,7 @@ def chatbot(update: Update, context: CallbackContext):
             return
         Message = message.text
         bot.send_chat_action(chat_id, action="typing")
-        kukiurl = requests.get('https://www.kukiapi.xyz/api/apikey=KUKIg76Fg4EIo/botname/owner/message='+Message)
+        kukiurl = requests.get('https://www.kukiapi.xyz/api/apikey=KUKIg76Fg4EIo/Cutiepii/@Awesome_RJ/message='+Message)
         Kuki = json.loads(kukiurl.text)
         kuki = Kuki['reply']
         sleep(0.3)
@@ -125,7 +151,7 @@ def chatbot(update: Update, context: CallbackContext):
 
 def list_all_chats(update: Update, context: CallbackContext):
     chats = sql.get_all_kuki_chats()
-    text = "<b>KUKI-Enabled Chats</b>\n"
+    text = "<b>Cutiepii Enabled Chats</b>\n"
     for chat in chats:
         try:
             x = context.bot.get_chat(int(*chat))
@@ -138,26 +164,25 @@ def list_all_chats(update: Update, context: CallbackContext):
     update.effective_message.reply_text(text, parse_mode="HTML")
 
 __help__ = """
-✗ `Chatbot utilizes the` *DEMON* `api which allows Demon to talk and provide a more interactive group chat experience.`
+Chatbot utilizes the Kuki's api which allows Kuki to talk and provide a more interactive group chat experience.
 
 *Admins only Commands*:
- 
-✗ /Chatbot - `Shows chatbot control panel`
+  ➢ `/Chatbot`*:* Shows chatbot control panel
   
-*✗ Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: S•4•Sʜɪᴠ!*
+*Powered by ItelAi*
 """
 
-__mod_name__ = "CʜᴀᴛBᴏᴛ"
+__mod_name__ = "ChatBot❣️"
 
 
-CHATBOTK_HANDLER = CommandHandler("chatbot", kuki)
-ADD_CHAT_HANDLER = CallbackQueryHandler(kukiadd, pattern=r"add_chat")
-RM_CHAT_HANDLER = CallbackQueryHandler(kukirm, pattern=r"rm_chat")
+CHATBOTK_HANDLER = CommandHandler("chatbot", kuki, run_async=True)
+ADD_CHAT_HANDLER = CallbackQueryHandler(kukiadd, pattern=r"add_chat", run_async=True)
+RM_CHAT_HANDLER = CallbackQueryHandler(kukirm, pattern=r"rm_chat", run_async=True)
 CHATBOT_HANDLER = MessageHandler(
     Filters.text & (~Filters.regex(r"^#[^\s]+") & ~Filters.regex(r"^!")
-                    & ~Filters.regex(r"^\/")), chatbot)
+                    & ~Filters.regex(r"^\/")), chatbot, run_async=True)
 LIST_ALL_CHATS_HANDLER = CommandHandler(
-    "allchats", list_all_chats, filters=CustomFilters.dev_filter)
+    "allchats", list_all_chats, filters=CustomFilters.dev_filter, run_async=True)
 
 dispatcher.add_handler(ADD_CHAT_HANDLER)
 dispatcher.add_handler(CHATBOTK_HANDLER)
