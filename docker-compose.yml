@@ -1,0 +1,32 @@
+version: "3.9"
+services:
+  worker:
+    build: .
+    environment:
+           TOKEN: $TOKEN
+           API_ID: $API_ID
+           API_HASH: $API_HASH
+           SQLALCHEMY_DATABASE_URI: $SQLALCHEMY_DATABASE_URI
+           OWNER_ID: $OWNER_ID
+           STRING_SESSION: $STRING_SESSION
+           BOT_ID: $BOT_ID
+           SUPPORT_CHAT: $SUPPORT_CHAT
+           MONGO_DB_URI: $MONGO_DB_URI
+           TIME_API_KEY: $TIME_API_KEY
+           JOIN_LOGGER: $JOIN_LOGGER
+           EVENT_LOGS: $EVENT_LOGS
+           CASH_API_KEY: $CASH_API_KEY
+           DEV_USERS: $DEV_USERS
+           sw_api: $sw_api
+           STRICT_GBAN: $STRICT_GBAN
+           DRAGONS: $DRAGONS
+           DEMONS: $DEMONS
+           TIGERS: $TIGERS
+           No_LOAD: $No_LOAD
+           WOLVES: $WOLVES
+           DONATION_LINK: $DONATION_LINK
+           DEL_CMDS: $DEL_CMDS
+           AI_API_KEY: $AI_API_KEY
+           BAN_STICKER: $BAN_STICKER
+           BL_CHATS: $BL_CHATS
+           ALLOW_EXCL: $ALLOW_EXCL
