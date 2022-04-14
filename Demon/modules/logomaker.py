@@ -205,7 +205,7 @@ async def logo_(event):
     if os.path.exists(bg_):
         os.remove(bg_)
     if os.path.exists(font_) and not font_.startswith(
-        "./Yuriko/resources/fonts"
+        "./Demon/resources/fonts"
     ):
         os.remove(font_)
 
