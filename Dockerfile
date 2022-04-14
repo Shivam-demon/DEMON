@@ -69,7 +69,7 @@ RUN git clone https://github.com/Shivam-demon/DEMON-OFFICIAL/root/Demon
 WORKDIR /root/Demon
 
 #Copy config file to /root/Demon
-COPY ./Demon/comfig.py ./Demon/config.py* /root/Demon/Demon/
+COPY ./Demon/config.py ./Demon/config.py* /root/Demon/Demon/
 
 ENV PATH="/home/bot/bin:$PATH"
 
