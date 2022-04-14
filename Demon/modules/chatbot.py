@@ -31,7 +31,7 @@ import re
 import os
 import html
 import requests
-import Demon.modules.sql.chatbot_sql as sql
+import Demon.modules.sql.kuki_sql as sql
 
 from time import sleep
 from telegram import ParseMode
