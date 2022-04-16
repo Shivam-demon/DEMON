@@ -17,7 +17,7 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import Demom.modules.sql.chatbot_sql as sql
+import Demon.modules.sql.chatbot_sql as sql
 from Demon import AI_API_KEY, SUPPORT_CHAT, dispatcher
 from Demon.modules.helper_funcs.chat_status import user_admin
 from Demon.modules.helper_funcs.filters import CustomFilters
