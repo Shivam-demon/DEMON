@@ -86,4 +86,4 @@ fuzzysearch
 img2pdf
 lyricsgenius==3.0.1
 multicolorcaptcha
-
+coffeehouse
