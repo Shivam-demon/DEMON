@@ -70,4 +70,4 @@ __help__ = """
 
 """
 
-__mod_name__ = "anti channel"        
+__mod_name__ = "•ᴀɴᴛɪ ᴄʜᴀɴɴᴇʟ"        
