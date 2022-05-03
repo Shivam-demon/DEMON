@@ -13,4 +13,4 @@ Hey Welcome To Here 💫💫 You Can Make Your Own Management Bot
 
 🔥 𝐃𝐄𝐏𝐋𝐎𝐘 𝐎𝐍 𝐘𝐎𝐔𝐑 𝐎𝐖𝐍 𝐑𝐈𝐒𝐊 🔥
 DON'T ASK FOR REPO PLEASE ...
-NO BUTTON HERE NOOB ...ATA H TO KHUD BNALE
+NO BUTTON HERE NOOB ...ATA H TO KHUD BNALE🤣
