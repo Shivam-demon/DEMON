@@ -85,4 +85,3 @@ pendulum
 fuzzysearch
 img2pdf
 multicolorcaptcha
-database
