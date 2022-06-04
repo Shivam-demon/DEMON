@@ -29,7 +29,7 @@ async def lego(event):
 
         image_widthz, image_heightz = img.size
 
-        font = ImageFont.truetype("./ShasaBot/resources/Chopsic.otf", 330)
+        font = ImageFont.truetype("./Demon/resources/Chopsic.otf", 330)
 
         w, h = draw.textsize(text, font=font)
 
