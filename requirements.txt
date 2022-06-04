@@ -49,7 +49,7 @@ PyDictionary
 yt-dlp
 youtube_search_python==1.4.9
 youtube_search
-lyrics_extractor
+lyricsgenius
 asyncio
 cloudscraper
 dateparser==1.1.0
