@@ -71,5 +71,5 @@ def gbanreq(update: Update, context: CallbackContext) -> str:
 
 
 
-GBANREQ_HANDLER = CommandHandler(("gban", "req"), gbanreq, run_async=True)
+GBANREQ_HANDLER = CommandHandler(("req"), gbanreq, run_async=True)
 dispatcher.add_handler(GBANREQ_HANDLER)
